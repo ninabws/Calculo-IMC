@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC: Índice de massa corporal</title>
+    <link rel="icon" type="image/png" href="imagens/unnamed.png"/>
+    <link rel="stylesheet" href="imcc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <script src="imc.js"></script>
+    <header id="principal">
+        <div id="text">
+            <h1 class="animate__animated animate__bounce">IMC- Índice de massa corporal</h1>
+            <p class="aviso">
+                Faça já o seu calculo e conheça um pouco mais sobre seu corpo.
+            </p>
+        </div>
+        <div style="float: right">
+            <center><img src="imagens/0.png" id="img"</center>
+            <p id="tp"></p>
+            <p id="c"> </p>
+          </div>
+        <div id="calculo">
+                        <h3>Preencha os campos vazios abaixo e calcule o seu IMC</h3>
+                        <br>
+                        <label for="kg">
+                            Peso
+                            <input name="kg" id="kg" placeholder="Peso em kg" type="number" />
+                        </label>
+
+
+                        <label for="altura">
+                            Altura
+                            <input name="altura" id="altura" placeholder="Altura em cm" type="number" />
+                        </label>
+                        Adulto: [<input type="radio" name="opcao" value="1"/>]  
+                        Idoso:   [<input type="radio" name="opcao" value="2"/>]<br/>
+
+                        
+                        <br>
+                        Resultado IMC:
+                        <input name="imc" id="imc" type="text" disabled="disabled" />
+                        <br><br>
+                        <button type= "button" onclick="calcular()">CALCULAR</button>
+
+                        
+                       
+        </div>
+    </header>
+    <section id="saibamais">
+        <h2>.</h2>
+        <div class="tabelas">
+          <div class="tabela">
+            <h3>Classificação para adultos</h3>
+            <table border="2">
+                <tr>
+                    <th>IMC</th>
+                    <th>CLASSIFICAÇÃO</th>
+                </tr>
+                <tr>
+                    <td><18,5</td>
+                    <td>Baixo peso</td>
+                </tr>
+                <tr>
+                    <td>18,5 a 24,9</td>
+                    <td>Peso normal</td>
+                </tr>
+                <tr>
+                    <td>25,0 a 29,9</td>
+                    <td>Excesso de peso</td>
+                </tr>
+                <tr>
+                    <td>30,0 a 34,9</td>
+                    <td>Obesidade de Classe 1</td>
+                </tr>
+                <tr>
+                    <td>35,0 a 39,9</td>
+                    <td>Obesidade de Classe 2</td>
+                </tr>
+                <tr>
+                    <td>≥ 40,0</td>
+                    <td>Obesidade de Classe 3</td>
+                </tr>
+            </table>
+          </div>
+          <div class="tabela">
+            <h3>Classificação para idosos</h3>
+        <table border="2">
+            <tr>
+                <th>IMC</th>
+                <th>CLASSIFICAÇÃO</th>
+            </tr>
+            <tr>
+                <td>≤ 22</td>
+                <td>Baixo peso</td>
+            </tr>
+            <tr>
+                <td>> 22 e < 27</td>
+                <td>Adequado ou eutrófico</td>
+            </tr>
+            <tr>
+                <td>≥ 27</td>
+                <td>Sobrepeso</td>
+            </tr>
+        </table>
+        </div>
+        </div>
+    </section>
+        <section id="saibamais">
+            <h2>Saiba mais</h2>
+        </section>
+        <br>
+        <br>
+        <br>
+        <div class="alinha">
+            <div id="info">
+            <div style="float: right">
+              <div id="img-1" class="info-img"></div>
+            </div>
+              <p>
+                IMC: você sabe o que o Índice de Massa Corporal diz sobre sua saúde? O calculo pode ser feito em casa, mas, dependendo do resultado, é importante procurar um médico para avaliar o grau de sobrepeso ou obesidade Índice de Massa Corporal. Você já deve ter ouvido falar nisso. Talvez apenas a sigla IMC. Mas você sabe que índice é este e o que ele pode dizer sobre a sua saúde? Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal. Ele aponta se o peso está adequado ou se está abaixo ou acima do peso. Para fazer o cálculo, basta dividir o peso pela altura ao quadrado. O número final representa o quanto a pessoa tem de massa muscular + massa de gordura + massa óssea. Com o resultado, o próximo passo é interpretá-lo.
+              </p>
+            </div>
+            <br>
+            <div id="info">
+            <div style="float: left">
+              <div id="img-2" class="info-img"></div>
+            </div>
+              <p>
+                Quando o índice de massa corporal recomendado está excedido, é porque a pessoa pode estar numa situação de sobrepeso com tendência à obesidade ou já ter a obesidade. Portanto, o calculo pode ser feito em casa, mas, dependendo do resultado, é importante procurar um médico para avaliar o grau de sobrepeso ou obesidade. Ou o extremo oposto disso. Se o índice estiver muito abaixo da normalidade para o homem e para a mulher indica que a pessoa pode estar no estado de desnutrição, de perda expressiva de massa. E assim como a obesidade, também existem graus de magreza
+              </p>
+            </div>
+          </div>
+        </div>
+        <br><br>
+    <footer id="footer">
+        <h3>IMC</h3>
+        <p>by: Nina Bianca</p>
+        <p><span>email:</span>nina.bianca06@aluno.ifce.edu.br</p>
+    </footer>
+</body>
+</html>
